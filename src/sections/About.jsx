@@ -2,8 +2,8 @@ import { useRef } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
-import { Frameworks } from "../components/FrameWorks";
 import SkillsProgress from "../components/SkillsProgress";
+import { Frameworks } from "../components/FrameWorks";
 
 const About = () => {
   const grid2Container = useRef();
@@ -115,7 +115,7 @@ const About = () => {
             </div>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
-            <Frameworks />
+            <Frameworks/>
           </div>
         </div>
 
