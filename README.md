@@ -205,4 +205,3 @@ Special thanks to the open-source community for the amazing tools and libraries.
 
 **Built with 💻 and ☕ by Subramaniyajothi**
 ```
-
