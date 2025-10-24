@@ -73,7 +73,7 @@ const HeroText = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://drive.google.com/file/d/1h7foS8iwjkXhxYtvpszTI_wBxvR_urF8/view?usp=sharing"
+              href="https://drive.google.com/file/d/1VmqWe1UOqlQAkLesDH_becDe2lzYxeQv/view?usp=sharing"
             >
               <button
                 className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors duration-300"

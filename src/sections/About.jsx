@@ -3,12 +3,12 @@ import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import SkillsProgress from "../components/SkillsProgress";
-import  Frameworks  from "../components/Frameworks";
+import Frameworks from "../components/Frameworks";
 
 const About = () => {
   const grid2Container = useRef();
   return (
-    <section className="c-space section-spacing" id="about">
+    <section className="c-space section-spacing " id="about">
       <h2 className="text-heading">About Me</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
@@ -32,11 +32,11 @@ const About = () => {
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
           >
-            <p className="flex items-end text-5xl text-gray-500">
+            <p className="flex items-end text-3xl sm:text-4xl md:text-5xl text-gray-500">
               FULL-STACK FLOW
             </p>
-            <Card
-              style={{ rotate: "75deg", top: "30%", left: "20%" }}
+            <Card 
+              style={{ rotate: "75deg", top: "30%", left: "20%",  }}
               text="REST APIs"
               containerRef={grid2Container}
             />
@@ -74,12 +74,14 @@ const About = () => {
           </div>
         </div>
 
+
+
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
             <p className="subtext">
-              I'm based in Mars, and open to remote work worldwide
+              Based in India, eager to collaborate on remote projects
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
@@ -89,7 +91,7 @@ const About = () => {
 
         {/* Grid 4 */}
         <div className="grid-special-color grid-4">
-          
+
           <div className="flex flex-col items-center justify-center gap-4 size-full">
             <p className="text-center headtext">
               Do you want to start a project together?
@@ -99,28 +101,23 @@ const About = () => {
         </div>
 
         {/* Grid 5 */}
-        <div className="grid-default-color grid-5 " 
+        <div className="grid-default-color grid-5 "
         >
-          <div className="z-10 w-[60%]">
+          <div className="z-10 w-[50%]">
             <p className="headText">Tech Stack</p>
-            <div className=" flex flex-col gap-1">
-            <p className="subtext">
-              I specialize in full-stack JavaScript development using the MERN stack—building responsive React interfaces, scalable Node.js APIs, and MongoDB databases.
-            </p>
-
-
-            <p className="subtext">
-              I Constantly expanding my expertise with modern tools to deliver production-ready web applications with clean code and seamless user experiences.
-            </p>
+            <div className=" flex flex-col gap-1 ">
+              <p className="subtext">
+                I specialize in full-stack MERN development, building responsive React interfaces and scalable Node.js APIs with MongoDB databases.
+              </p>
             </div>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
-            <Frameworks/>
+            <Frameworks />
           </div>
         </div>
 
-      {/* Grid 6 */}
-        <div className="grid-default-color grid-6">
+        {/* Grid 6 */}
+        {/* <div className="grid-default-color grid-6 ">
           <div className="flex flex-col justify-center h-full p-4 ">
             <div className="z-10 mb-8 ">
               <p className="headtext">Skill Levels</p>
@@ -130,7 +127,7 @@ const About = () => {
               <SkillsProgress />
             </div>
           </div>
-        </div>
+        </div> */}
 
 
 

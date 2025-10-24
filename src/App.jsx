@@ -5,6 +5,7 @@ import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 import Projects from "./sections/Projects";
+import SkillSet from "./sections/SkillSet";
 // import Testimonial from "./sections/Testimonial";
 
 const App = () => {
@@ -13,9 +14,9 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <SkillSet/>
       <Projects />
       <Experiences />
-      {/* <Testimonial /> */}
       <Contact />
       <Footer/>
 
