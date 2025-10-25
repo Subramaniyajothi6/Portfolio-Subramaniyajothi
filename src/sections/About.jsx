@@ -118,18 +118,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Grid 6 */}
-        {/* <div className="grid-default-color grid-6 ">
-          <div className="flex flex-col justify-center h-full p-4 ">
-            <div className="z-10 mb-8 ">
-              <p className="headtext">Skill Levels</p>
-              <p className="subtext">My proficiency in core technologies</p>
-            </div>
-            <div className="max-w-6xl mx-auto w-full ">
-              <SkillsProgress />
-            </div>
-          </div>
-        </div> */}
 
 
 
