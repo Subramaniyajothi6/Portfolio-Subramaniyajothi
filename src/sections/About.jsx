@@ -9,7 +9,8 @@ const About = () => {
   const grid2Container = useRef();
   return (
     <section className="c-space section-spacing " id="about">
-      <h2 className="text-heading">About Me</h2>
+      <h2 className="text-heading mb-3">About Me</h2>
+      <div className="w-20 h-1 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full mb-4"></div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
