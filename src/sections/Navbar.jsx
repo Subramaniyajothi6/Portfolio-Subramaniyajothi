@@ -4,7 +4,7 @@ function Navigation() {
   return (
     <ul className="nav-ul ">
       <li className="nav-li">
-        <a className="nav-link" 
+        <a className="nav-link cursor-pointer" 
          onClick={() => {
                 // Add your contact logic here
                 document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });

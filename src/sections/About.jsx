@@ -14,9 +14,11 @@ const About = () => {
         {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
           <img
-            src="assets/coding-pov.png"
+            src="assets/coding-pov-1.webp"
+            alt="Developer workspace"
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
-          />
+            loading="lazy"
+            decoding="async" />
           <div className="z-10">
             <p className="headtext">Hi, I'm Subramaniyajothi</p>
             <p className="subtext">
@@ -35,8 +37,8 @@ const About = () => {
             <p className="flex items-end text-3xl sm:text-4xl md:text-5xl text-gray-500">
               FULL-STACK FLOW
             </p>
-            <Card 
-              style={{ rotate: "75deg", top: "30%", left: "20%",  }}
+            <Card
+              style={{ rotate: "75deg", top: "30%", left: "20%", }}
               text="REST APIs"
               containerRef={grid2Container}
             />
@@ -56,17 +58,17 @@ const About = () => {
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "20deg", top: "10%", left: "38%" }}
+              style={{ rotate: "15deg", top: "8%", left: "60%" }}
               text="Comp Architecture"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "20deg", top: "10%", left: "38%" }}
+              style={{ rotate: "-20deg", bottom: "10%", left: "50%" }}
               text="JWT Auth"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "20deg", top: "10%", left: "38%" }}
+              style={{ rotate: "10deg", top: "35%", right: "5%" }}
               text="Form Validation"
               containerRef={grid2Container}
             />

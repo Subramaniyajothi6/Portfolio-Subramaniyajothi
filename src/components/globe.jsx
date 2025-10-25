@@ -17,22 +17,21 @@ const GLOBE_CONFIG = {
   theta: 0.3,
   dark: 1,
   diffuse: 0.4,
-  mapSamples: 16000,
-  mapBrightness: 1.2,
+  mapSamples: 15000,
+  mapBrightness: 1.02,
   baseColor: [1, 1, 1],
   markerColor: [1, 1, 1],
   glowColor: [1, 1, 1],
   markers: [
-    { location: [14.5995, 120.9842], size: 0.03 },
-    { location: [19.076, 72.8777], size: 0.1 },
-    { location: [23.8103, 90.4125], size: 0.05 },
-    { location: [30.0444, 31.2357], size: 0.07 },
-    { location: [39.9042, 116.4074], size: 0.08 },
-    { location: [-23.5505, -46.6333], size: 0.1 },
-    { location: [19.4326, -99.1332], size: 0.1 },
+    { location: [11.0168, 76.9558], size: 0.12 }, 
+    { location: [19.076, 72.8777], size: 0.08 },
+    { location: [28.7041, 77.1025], size: 0.08 }, 
+    { location: [12.9716, 77.5946], size: 0.08 },
     { location: [40.7128, -74.006], size: 0.1 },
-    { location: [34.6937, 135.5022], size: 0.05 },
-    { location: [41.0082, 28.9784], size: 0.06 },
+    { location: [51.5074, -0.1278], size: 0.09 }, 
+    { location: [35.6762, 139.6503], size: 0.09 }, 
+    { location: [-33.8688, 151.2093], size: 0.08 }, 
+    { location: [1.3521, 103.8198], size: 0.08 },
   ],
 };
 
@@ -80,7 +79,7 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
       width: width * 2,
       height: width * 2,
       onRender: (state) => {
-        if (!pointerInteracting.current) phi += 0.005;
+        if (!pointerInteracting.current) phi += 0.006;
         state.phi = phi + rs.get();
         state.width = width * 2;
         state.height = width * 2;
@@ -103,7 +102,7 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
     >
       <canvas
         className={twMerge(
-          "size-[30rem] opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
+          "size-[29rem] opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
         )}
         ref={canvasRef}
         onPointerDown={(e) => {

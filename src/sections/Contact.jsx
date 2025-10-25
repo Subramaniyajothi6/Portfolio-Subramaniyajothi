@@ -1,7 +1,3 @@
-
-
-
-
 import { useState } from "react";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";

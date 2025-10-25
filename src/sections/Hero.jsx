@@ -12,10 +12,10 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   return (
     <section className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space" id="home">
-      <HeroText />
+      <HeroText/>     
       <ParallaxBackground />
       <figure
-        className="absolute inset-0"
+        className="absolute inset-0 blur-[0.5px] md:blur-none"  
         style={{ width: "100vw", height: "100vh" }}
       >
         <Canvas camera={{ position: [0, 1, 3] }}>
@@ -30,6 +30,8 @@ const Hero = () => {
           </Suspense>
         </Canvas>
       </figure>
+
+
     </section>
   );
 };

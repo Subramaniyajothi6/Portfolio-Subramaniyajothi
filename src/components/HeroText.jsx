@@ -77,7 +77,7 @@ const HeroText = () => {
             >
               <button
                 className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors duration-300"
-               
+
               >
                 Resume
               </button>
@@ -90,7 +90,7 @@ const HeroText = () => {
         </div>
       </div>
       {/* Mobile View */}
-      <div className="flex- flex-col space-y-6 md:hidden">
+      <div className="flex- flex-col mt-10 space-y-6 md:hidden ">
         <motion.p
           className="text-4xl font-medium"
           variants={variants}
@@ -102,7 +102,7 @@ const HeroText = () => {
         </motion.p>
         <div>
           <motion.p
-            className="text-5xl font-black text-neutral-300"
+            className="text-5xl font-black "
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -130,6 +130,68 @@ const HeroText = () => {
           >
             Web Applications
           </motion.p>
+          {/* <motion.div
+            className="flex gap-4 mt-8"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 2.1 }}
+          >
+            <button
+              className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-300"
+
+              onClick={() => {
+                // Add your contact logic here
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+
+            >
+              Connect With Me
+            </button>
+
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://drive.google.com/file/d/1VmqWe1UOqlQAkLesDH_becDe2lzYxeQv/view?usp=sharing"
+            >
+              <button
+                className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors duration-300"
+               
+              >
+                Resume
+              </button>
+            </a>
+          </motion.div> */}
+          <motion.div
+            className="flex gap-4 mt-8 justify-center"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 2.1 }}
+            
+          >
+            <button
+              className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-300 text-sm sm:text-base"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Connect With Me
+            </button>
+
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://drive.google.com/file/d/1VmqWe1UOqlQAkLesDH_becDe2lzYxeQv/view?usp=sharing"
+            >
+              <button
+                className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors duration-300 text-sm sm:text-base"
+              >
+                Resume
+              </button>
+            </a>
+          </motion.div>
+
 
 
         </div>
