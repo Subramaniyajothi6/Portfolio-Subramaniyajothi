@@ -179,7 +179,7 @@ All components are designed to work seamlessly across these breakpoints using Ta
 
 ## 📬 Contact
 
-**Email:** ssrithar68@gmail.com  
+**Email:** subramaniayjothi2002@gmail.com  
 **GitHub:** [github.com/Subramaniyajothi6](https://github.com/Subramaniyajothi6)  
 **LinkedIn:** [linkedin.com/in/subramaniyajothi](https://www.linkedin.com/in/subramaniyajothi/)
 
