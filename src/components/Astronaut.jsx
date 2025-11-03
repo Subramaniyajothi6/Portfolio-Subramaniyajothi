@@ -136,8 +136,9 @@ import { useFrame } from "@react-three/fiber";
 export function Astronaut(props) {
   const group = useRef();
   
-  // Safe model loading with error handling
+  // Safe model loading with try-catch
   let nodes, materials, animations, actions;
+  
   try {
     const gltf = useGLTF("/models/tenhun_falling_spaceman_fanart-1.glb");
     nodes = gltf.nodes;
@@ -150,27 +151,23 @@ export function Astronaut(props) {
     return null;
   }
 
-  // Play animation
   useEffect(() => {
     if (animations && animations.length > 0 && actions) {
-      const action = actions[animations[0].name];
-      if (action) {
-        action.play();
-      }
+      actions[animations[0].name]?.play();
     }
   }, [actions, animations]);
 
   // Set initial Y position
   useEffect(() => {
     if (group.current) {
-      group.current.position.y = 5;
+      group.current.position.y = 5; // Start position (off-screen)
     }
   }, []);
 
   // Animate to final position
   useFrame(() => {
     if (group.current && group.current.position.y > -1) {
-      group.current.position.y -= 0.02;
+      group.current.position.y -= 0.02; // Smooth descent
     }
   });
 
