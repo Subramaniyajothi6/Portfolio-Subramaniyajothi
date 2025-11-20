@@ -107,7 +107,7 @@ const About = () => {
         <div className="grid-default-color grid-5 "
         >
           <div className="z-10 w-[50%]">
-            <p className="headText">Tech Stack</p>
+            <p className="headtext">Tech Stack</p>
             <div className=" flex flex-col gap-1 ">
               <p className="subtext">
                 I specialize in full-stack MERN development, building responsive React interfaces and scalable Node.js APIs with MongoDB databases.

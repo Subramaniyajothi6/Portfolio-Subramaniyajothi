@@ -17,7 +17,8 @@ const Projects = () => {
       onMouseMove={handleMouseMove}
       className="relative c-space section-spacing" id="work"
     >
-      <h2 className="text-heading">Featured Projects</h2>
+      <h2 className="text-heading mb-3">Featured Projects</h2>
+      <div className="w-20 h-1 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full mb-4"></div>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
       {myProjects.map((project) => (
         <Project key={project.id} {...project} setPreview={setPreview} />
