@@ -81,12 +81,18 @@ subDescription: [
   title: "Online Book Store Application",
   description:
     "A full-featured platform for browsing, purchasing, and managing books online, offering users a seamless reading and shopping experience.",
+  // subDescription: [
+  //   "Developed a full-stack web application using the MERN stack (MongoDB, Express.js, React, Node.js) with scalable architecture and modular design.",
+  //   "Implemented secure authentication and authorization for users and admins, enabling cart management, order tracking, and book inventory control.",
+  //   "Built an intuitive, responsive UI using React and Tailwind CSS with search, filter, and category-based book exploration.",
+  //   "Integrated payment gateway for seamless checkout, Cloudinary for image storage, and SMTP-based email notifications for order updates.",
+  // ],
   subDescription: [
-    "Developed a full-stack web application using the MERN stack (MongoDB, Express.js, React, Node.js) with scalable architecture and modular design.",
-    "Implemented secure authentication and authorization for users and admins, enabling cart management, order tracking, and book inventory control.",
-    "Built an intuitive, responsive UI using React and Tailwind CSS with search, filter, and category-based book exploration.",
-    "Integrated payment gateway for seamless checkout, Cloudinary for image storage, and SMTP-based email notifications for order updates.",
-  ],
+  "Built a scalable MERN stack (MongoDB, Express, React, Node) web application.",
+  "Implemented authentication, cart management, order tracking, and inventory control.",
+  "Designed a responsive UI with React and Tailwind, including search and filtering.",
+  "Integrated payment gateway, Cloudinary storage, and email notifications.",
+],
   href: "https://book-store-app-frontend-s1mp.vercel.app/",
   logo: "",
   image: "/assets/projects/Book Store App.png",
