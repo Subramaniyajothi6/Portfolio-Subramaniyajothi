@@ -5,13 +5,13 @@ export const myProjects = [
     id: 1,
     title: "Placement Management System",
     description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
-    subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
-    ],
+    "A full-stack MERN application to streamline college placement processes, including applications, interviews, and placement drives.",
+      subDescription: [
+    "Implemented role-based workflows for Admin, Company, and Student with secure JWT authentication.",
+    "Built features for application tracking, interview scheduling, and real-time status updates.",
+    "Integrated Cloudinary (file storage), Nodemailer (email notifications), and Jitsi Meet (video interviews).",
+    "Developed analytics dashboard using Recharts with PDF export functionality for reports.",
+  ],
     href: "https://placementmanagementsystem-project.netlify.app/",
     logo: "",
     image: "assets/projects/Placement Mangement System.png",
