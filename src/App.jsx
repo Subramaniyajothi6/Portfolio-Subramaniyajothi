@@ -10,6 +10,7 @@ const About = lazy(() => import("./sections/About"));
 const Projects = lazy(() => import("./sections/Projects"));
 const SkillSet = lazy(() => import("./sections/SkillSet"));
 const Experiences = lazy(() => import("./sections/Experiences"));
+const Achievements = lazy(() => import("./sections/Testimonial"));
 const Contact = lazy(() => import("./sections/Contact"));
 const Footer = lazy(() => import("./sections/Footer"));
 
@@ -44,7 +45,11 @@ const App = () => {
       <Suspense fallback={<Loader />}>
         <Experiences />
       </Suspense>
-      
+
+      <Suspense fallback={<Loader />}>
+        <Achievements />
+      </Suspense>
+
       <Suspense fallback={<Loader />}>
         <Contact />
       </Suspense>

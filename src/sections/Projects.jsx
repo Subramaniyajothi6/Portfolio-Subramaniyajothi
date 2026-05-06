@@ -1,21 +1,22 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Project from "../components/Project";
 import { myProjects } from "../constants";
 import { motion, useMotionValue, useSpring } from "motion/react";
+
 const Projects = () => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const springX = useSpring(x, { damping: 10, stiffness: 50 });
   const springY = useSpring(y, { damping: 10, stiffness: 50 });
-  const handleMouseMove = (e) => {
+  const handleMouseMove = useCallback((e) => {
     x.set(e.clientX + 20);
     y.set(e.clientY + 20);
-  };
+  }, [x, y]);
   const [preview, setPreview] = useState(null);
   return (
     <section
       onMouseMove={handleMouseMove}
-      className="relative c-space section-spacing" id="work"
+      className="relative c-space section-spacing scroll-mt-20" id="work"
     >
       <h2 className="text-heading mb-3">Featured Projects</h2>
       <div className="w-20 h-1 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full mb-4"></div>

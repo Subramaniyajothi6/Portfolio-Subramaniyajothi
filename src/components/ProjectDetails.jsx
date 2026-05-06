@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+import { useEffect, useRef } from "react";
+
 const ProjectDetails = ({
   title,
   description,
@@ -8,41 +10,72 @@ const ProjectDetails = ({
   href,
   closeModal,
 }) => {
+  const closeButtonRef = useRef(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") closeModal();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    closeButtonRef.current?.focus();
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [closeModal]);
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+      onClick={closeModal}
+    >
       <motion.div
-        className="relative max-w-4xl  border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
+        className="relative w-full max-w-2xl flex flex-col rounded-2xl bg-gradient-to-l from-midnight to-navy border border-white/10 shadow-2xl overflow-hidden"
         initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 0.75 }}
+        animate={{ opacity: 1, scale: 1 }}
+        onClick={(e) => e.stopPropagation()}
       >
+        {/* Close button */}
         <button
+          ref={closeButtonRef}
           onClick={closeModal}
-          className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
+          className="absolute top-3 right-3 z-10 p-2 rounded-full bg-midnight/80 backdrop-blur-sm hover:bg-gray-600 transition-colors"
         >
-          <img src="assets/close.svg" className="w-5 h-5" />
+          <img src="assets/close.svg" className="w-4 h-4" alt="Close" />
         </button>
-        <img src={image} alt={title} className="w-full rounded-t-2xl" />
-        <div className="p-5">
-          <h5 className="mb-2 text-xl font-bold text-white">{title}</h5>
-          <p className="mb-3  font-normal text-neutral-400">{description}</p>
+
+        {/* Project image */}
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-52 sm:h-60 object-cover flex-shrink-0"
+        />
+
+        {/* Content area — no scroll, compact layout */}
+        <div className="p-4">
+          <h5 className="mb-1.5 text-sm font-bold text-white">{title}</h5>
+          <p className="mb-1 text-xs text-neutral-400">{description}</p>
           {subDescription.map((subDesc, index) => (
-            <p className="mb-3 font-normal text-neutral-400">{subDesc}</p>
+            <p key={index} className="mb-1 text-xs text-neutral-400">
+              {subDesc}
+            </p>
           ))}
-          <div className="flex items-center justify-between mt-4">
-            <div className="flex gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-3 mt-3">
+            <div className="flex flex-wrap gap-2">
               {tags.map((tag) => (
                 <img
                   key={tag.id}
                   src={tag.path}
                   alt={tag.name}
-                  className="rounded-lg size-10 hover-animation"
+                  className="rounded-lg size-8 hover-animation"
                 />
               ))}
             </div>
-            <a className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation" href={href} target="_blank" >
+            <a
+              className="inline-flex items-center gap-1 text-sm font-medium cursor-pointer hover-animation flex-shrink-0"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               View Project{" "}
-              <img src="assets/arrow-up.svg" className="size-4 border-amber-50 "  />
-
+              <img src="assets/arrow-up.svg" className="size-4" alt="" />
             </a>
           </div>
         </div>

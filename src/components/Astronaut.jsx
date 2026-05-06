@@ -1,5 +1,4 @@
-
-import  { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
@@ -9,27 +8,24 @@ export function Astronaut(props) {
     "/models/tenhun_falling_spaceman_fanart-1.glb"
   );
   const { actions } = useAnimations(animations, group);
+
   useEffect(() => {
     if (animations.length > 0) {
       actions[animations[0].name]?.play();
     }
   }, [actions, animations]);
 
-  // Set initial Y position
-useEffect(() => {
-  if (group.current) {
-    group.current.position.y = 5; // Start position (off-screen)
-  }
-}, []);
+  useEffect(() => {
+    if (group.current) {
+      group.current.position.y = 5;
+    }
+  }, []);
 
-// Animate to final position
-useFrame(() => {
-  if (group.current && group.current.position.y > -1) {
-    group.current.position.y -= 0.02; // Smooth descent
-  }
-});
-
-
+  useFrame(() => {
+    if (group.current && group.current.position.y > -1) {
+      group.current.position.y -= 0.02;
+    }
+  });
 
   return (
     <group
@@ -128,4 +124,3 @@ useFrame(() => {
 }
 
 useGLTF.preload("/models/tenhun_falling_spaceman_fanart-1.glb");
-

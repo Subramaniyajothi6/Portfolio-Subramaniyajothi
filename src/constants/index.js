@@ -1,5 +1,3 @@
-import { fill } from "three/src/extras/TextureUtils.js";
-
 export const myProjects = [
   {
     id: 1,
@@ -14,7 +12,7 @@ export const myProjects = [
   ],
     href: "https://placementmanagementsystem-project.netlify.app/",
     logo: "",
-    image: "assets/projects/Placement Mangement System.png",
+    image: "/assets/projects/Placement Management System.png",
     tags: [
       {
         id: 1,

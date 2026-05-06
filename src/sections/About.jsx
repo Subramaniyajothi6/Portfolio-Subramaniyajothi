@@ -2,13 +2,12 @@ import { useRef } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
-import SkillsProgress from "../components/SkillsProgress";
 import Frameworks from "../components/Frameworks";
 
 const About = () => {
   const grid2Container = useRef();
   return (
-    <section className="c-space section-spacing " id="about">
+    <section className="c-space section-spacing scroll-mt-20" id="about">
       <h2 className="text-heading mb-3">About Me</h2>
       <div className="w-20 h-1 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full mb-4"></div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
@@ -26,7 +25,7 @@ const About = () => {
               Full-stack developer specializing in React and Node.js, building dynamic web applications with seamless frontend-backend integration and responsive design.
             </p>
           </div>
-          <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
+          <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
 
         {/* Grid 2 */}
@@ -35,56 +34,54 @@ const About = () => {
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
           >
-            <p className="flex items-end text-3xl sm:text-4xl md:text-5xl text-gray-500">
-              FULL-STACK FLOW
-            </p>
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 select-none pointer-events-none">
+              <span className="text-3xl sm:text-4xl font-black tracking-[0.15em] uppercase text-white/[0.07]">FULL-STACK</span>
+              <span className="text-3xl sm:text-4xl font-black tracking-[0.15em] uppercase text-white/[0.07]">FLOW</span>
+            </div>
             <Card
-              style={{ rotate: "75deg", top: "30%", left: "20%", }}
+              style={{ rotate: "75deg", top: "25%", left: "15%" }}
               text="REST APIs"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "-30deg", top: "60%", left: "45%" }}
+              style={{ rotate: "-30deg", top: "55%", left: "40%" }}
               text="GSAP"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="Responsive Design"
+              style={{ rotate: "90deg", bottom: "25%", left: "65%" }}
+              text="Responsive"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="State Management"
+              style={{ rotate: "-45deg", top: "50%", left: "2%" }}
+              text="State Mgmt"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "15deg", top: "8%", left: "60%" }}
-              text="Comp Architecture"
+              style={{ rotate: "15deg", top: "5%", left: "55%" }}
+              text="Architecture"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "-20deg", bottom: "10%", left: "50%" }}
+              style={{ rotate: "-20deg", bottom: "5%", left: "45%" }}
               text="JWT Auth"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "10deg", top: "35%", right: "5%" }}
-              text="Form Validation"
+              style={{ rotate: "10deg", top: "30%", right: "2%" }}
+              text="Validation"
               containerRef={grid2Container}
             />
-
           </div>
         </div>
-
-
 
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
-            <p className="headtext">Time Zone</p>
-            <p className="subtext">
-              Based in India, eager to collaborate on remote projects
+            <p className="headtext font-semibold text-white">Time Zone</p>
+            <p className="subtext mt-1">
+              Based in India, open to remote collaboration worldwide
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
@@ -94,23 +91,24 @@ const About = () => {
 
         {/* Grid 4 */}
         <div className="grid-special-color grid-4">
-
           <div className="flex flex-col items-center justify-center gap-4 size-full">
-            <p className="text-center headtext">
-              Do you want to start a project together?
+            <p className="text-center text-lg font-semibold text-white leading-snug">
+              Want to build something great together?
+            </p>
+            <p className="text-center text-sm text-white/70 -mt-2">
+              Drop me an email and let's talk.
             </p>
             <CopyEmailButton />
           </div>
         </div>
 
         {/* Grid 5 */}
-        <div className="grid-default-color grid-5 "
-        >
+        <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headtext">Tech Stack</p>
-            <div className=" flex flex-col gap-1 ">
+            <p className="headtext font-semibold text-white">Tech Stack</p>
+            <div className="flex flex-col gap-1 mt-1">
               <p className="subtext">
-                I specialize in full-stack MERN development, building responsive React interfaces and scalable Node.js APIs with MongoDB databases.
+                Full-stack MERN developer — responsive React UIs, scalable Node.js APIs, MongoDB databases.
               </p>
             </div>
           </div>
@@ -118,13 +116,9 @@ const About = () => {
             <Frameworks />
           </div>
         </div>
-
-
-
-
       </div>
-    </section >
-  )
+    </section>
+  );
 };
 
 export default About;

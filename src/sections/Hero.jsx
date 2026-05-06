@@ -22,7 +22,7 @@ const Hero = () => {
           <Suspense fallback={<Loader />}>
             <Float>
               <Astronaut
-                scale={isMobile ? 0.23 : 0.3}             
+                scale={isMobile ? 0.23 : 0.3}
                 position={isMobile ? [0, -1.5, 0] : [1.3, -1, 0]}
               />
             </Float>
@@ -32,6 +32,12 @@ const Hero = () => {
       </figure>
 
 
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 animate-bounce opacity-60">
+        <span className="text-xs text-neutral-300 tracking-widest uppercase">scroll</span>
+        <svg className="w-5 h-5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
     </section>
   );
 };
